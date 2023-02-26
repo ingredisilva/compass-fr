@@ -1,68 +1,77 @@
-import Image from 'next/image';
 import Link from 'next/link';
+import Education from 'public/svg/education.svg';
+import Goals from 'public/svg/goals.svg';
+import Finance from 'public/svg/graph.svg';
+import Projects from 'public/svg/projects.svg';
+import Settings from 'public/svg/settings.svg';
+import SleepData from 'public/svg/sleep.svg';
+import CompassPoints from 'public/svg/star.svg';
+import Todo from 'public/svg/todo.svg';
 import React from 'react';
 
 const dashboard = [
   {
     name: 'Finances',
     href: '',
-    icon: '',
+    icon: <Finance width={20} height={20} />,
   },
   {
     name: 'Projects',
     href: '',
-    icon: '',
+    icon: <Projects width={20} height={20} />,
   },
   {
     name: 'Education',
     href: '',
-    icon: '',
+    icon: <Education width={20} height={20} />,
   },
   {
     name: 'Sleep Data',
     href: '',
-    icon: '',
+    icon: <SleepData width={20} height={20} />,
   },
   {
     name: 'Goals',
     href: '',
-    icon: '',
+    icon: <Goals width={20} height={20} />,
   },
   {
-    name: 'Fitness',
+    name: 'Todo',
     href: '',
-    icon: '',
+    icon: <Todo width={20} height={20} />,
   },
   {
     name: 'CompassPoints',
     href: '',
-    icon: '',
+    icon: <CompassPoints width={20} height={20} />,
   },
 ];
 
 function Dashboard() {
   return (
-    <aside className='m-4 h-3/4 rounded-full bg-primary-orangemd p-8'>
-      <nav className='flex flex-col'>
-        <div className='flex flex-col gap-8'>
+    <aside className='m-10 h-3/4 rounded-3xl bg-slate-50 p-2 shadow-2xl'>
+      <nav className='flex h-full flex-col justify-between p-3'>
+        <div className='flex w-full flex-col gap-2 '>
           {dashboard.map((navItems, index) => {
             return (
               <>
-                <button>
-                  <Image src='' />
-                </button>
                 <button
                   key={index}
-                  className='flex justify-start font-primary text-sm text-primary-orangelight hover:bg-orange-300'
+                  className='flex w-full items-center rounded-2xl p-2 font-primary text-sm text-gray-800 hover:bg-slate-100'
                 >
-                  <Link href={navItems.href} className=''>
+                  {navItems.icon}
+                  <Link href={navItems.href} className='mx-4 font-semibold '>
                     {navItems.name}
                   </Link>
                 </button>
               </>
             );
           })}
-        </div>
+        </div>{' '}
+        <button className='mt-10 flex items-center justify-center gap-1 rounded-full bg-orange-200 p-1 font-semibold'>
+          <Settings alt='' width={20} height={30} />
+          Settings
+        </button>
       </nav>
     </aside>
   );

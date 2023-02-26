@@ -1,5 +1,9 @@
 import React from 'react';
 
 export default function Content() {
-  return <div>Content</div>;
+  return (
+    <div>
+      <h1>Welcome, Ingredi</h1>
+    </div>
+  );
 }
