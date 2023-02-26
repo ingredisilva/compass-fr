@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Dashboard from '@/components/layout/Dashboard';
+import ContentPage from '@/components/ContentPage';
 import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
@@ -9,7 +9,9 @@ export default function HomePage() {
     <Layout>
       {/* <Seo templateTitle='Home' /> */}
       <Seo />
-      <Dashboard />
+      <div className='h-screen bg-[F1F1F1]'>
+        <ContentPage />
+      </div>
     </Layout>
   );
 }
