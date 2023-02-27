@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import Logo from 'public/images/compasslogo.png';
 import * as React from 'react';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
@@ -11,13 +9,12 @@ const links = [
 
 export default function Header() {
   return (
-    <header className='sticky top-0 z-50 '>
-      <div className='layout flex h-14 items-center justify-between'>
+    <header className='sticky top-0 z-50 mb-10'>
+      <div className='layout flex h-20 items-center justify-between'>
         <span className='flex items-center justify-center'>
           {' '}
-          <Image src={Logo} alt='Compass logo' width={40} />
-          <p className='text-primary-pink text-center font-secondary'>
-            COMPASS
+          <p className='text-center font-primary text-2xl font-bold text-primary-orangemd'>
+            + compass
           </p>
         </span>
         <nav>

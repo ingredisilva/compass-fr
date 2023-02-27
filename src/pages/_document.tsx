@@ -2,7 +2,10 @@ import { Head, Html, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang='en'>
+    <Html
+      lang='en'
+      className='h-full bg-gradient-to-t from-rose-100 to-teal-100'
+    >
       <Head>
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
