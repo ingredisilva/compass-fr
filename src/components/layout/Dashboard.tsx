@@ -68,7 +68,7 @@ function Dashboard() {
             );
           })}
         </div>{' '}
-        <button className='mt-10 flex items-center justify-center gap-1 rounded-full bg-orange-200 p-1 font-semibold'>
+        <button className='mt-10 flex items-center justify-center gap-1 rounded-xl bg-orange-200 p-1 font-semibold'>
           <Settings alt='' width={20} height={30} />
           Settings
         </button>
