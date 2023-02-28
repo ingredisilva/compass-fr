@@ -1,0 +1,109 @@
+{
+  "user": {
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "password": "password123",
+    "age": 30,
+    "gender": "Male",
+    "location": "New York",
+    "occupation": "Software Engineer",
+    "interests": ["Coding", "Hiking", "Reading"],
+    "habits": [
+      {
+        "name": "Coding",
+        "description": "Work on a coding project for 1 hour every day.",
+        "points": 10,
+        "category": "Professional",
+        "tags": ["Coding", "Programming", "Development"],
+        "schedule": "Daily",
+        "progress": 50,
+        "hoursInvested": 5
+      },
+      {
+        "name": "Hiking",
+        "description": "Hike for at least 3 miles once a week.",
+        "points": 5,
+        "category": "Physical",
+        "tags": ["Hiking", "Outdoors", "Nature"],
+        "schedule": "Weekly",
+        "progress": 100,
+        "hoursInvested": 2
+      }
+    ],
+    "projects": [
+      {
+        "name": "Build a Personal Website",
+        "description": "Build a website to showcase my portfolio.",
+        "start_date": "2022-01-01",
+        "end_date": "2022-02-28",
+        "status": "In Progress",
+        "steps": [
+          {
+            "name": "Design Website",
+            "description": "Create a design for the website.",
+            "start_date": "2022-01-01",
+            "end_date": "2022-01-10",
+            "status": "Complete",
+            "progress": 100,
+            "points": 10,
+            "category": "Professional",
+            "tags": ["Web Design", "UI/UX"],
+            "collaborators": [
+              {
+                "name": "Jane Doe",
+                "email": "janedoe@example.com",
+                "role": "Designer"
+              }
+            ],
+            "resources": [
+              {
+                "name": "Sketch",
+                "description": "Design software",
+                "type": "Software",
+                "quantity": 1
+              }
+            ]
+          },
+          {
+            "name": "Code Website",
+            "description": "Write code to implement the design.",
+            "start_date": "2022-01-10",
+            "end_date": "2022-02-28",
+            "status": "In Progress",
+            "progress": 50,
+            "points": 20,
+            "category": "Professional",
+            "tags": ["Web Development", "HTML", "CSS", "JavaScript"],
+            "collaborators": [
+              {
+                "name": "Bob Smith",
+                "email": "bobsmith@example.com",
+                "role": "Developer"
+              }
+            ],
+            "resources": [
+              {
+                "name": "Visual Studio Code",
+                "description": "Code editor",
+                "type": "Software",
+                "quantity": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "finances": [
+      {
+        "name": "Savings",
+        "type": "Savings Account",
+        "description": "Emergency savings fund.",
+        "start_date": "2022-01-01",
+        "end_date": "2023-01-01",
+        "status": "In Progress",
+        "category": "Financial",
+        "tags": ["Savings", "Emergency Fund"]
+      }
+    ]
+  }
+}

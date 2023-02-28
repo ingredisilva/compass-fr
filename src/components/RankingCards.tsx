@@ -43,13 +43,13 @@ function Cards() {
     <div className='m-4 flex h-full flex-col gap-4'>
       <div className='flex flex-col items-center '>
         <h3>Leaders</h3>
-        <p className='text-xs'>Check whos winning in life!</p>
+        <p className='text-xs'>Check whos winning!</p>
         {ranking.map((rankings, index) => {
           return (
             <>
               <div
                 key={index}
-                className='flex items-center gap-4 rounded-xl p-4'
+                className='flex items-center gap-4 rounded-xl p-4 '
               >
                 <p className='bg-primary-tealmd m-2 rounded-full p-1 font-bold'>
                   {rankings.position}
