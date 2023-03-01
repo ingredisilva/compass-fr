@@ -40,40 +40,47 @@ const ranking = [
 
 function Cards() {
   return (
-    <div className='m-4 flex flex-col gap-4'>
+    <div className='m-4 flex h-full flex-col gap-4'>
       <div className='flex flex-col items-center '>
         <h3>Leaders</h3>
-        <p className='text-xs'>Check whos winning in life!</p>
+        <p className='text-xs'>Check whos winning!</p>
         {ranking.map((rankings, index) => {
           return (
-            <div key={index} className='flex items-center gap-4 rounded-xl p-4'>
-              <p className='bg-primary-tealmd m-2 rounded-full p-1 font-bold'>
-                {rankings.position}
-              </p>
-              <span className='flex items-center gap-4'>
-                <span className='absolute flex h-12 items-center rounded-xl '>
-                  <Image
-                    src={rankings.avatar}
-                    alt=''
-                    width={50}
-                    className='relative h-full rounded-xl object-cover '
-                  />
-                </span>
-                <span className='relative top-5 left-8 z-10'>
-                  {rankings.badge}
-                </span>
-              </span>
-
-              <span className='relative ml-4 flex flex-col text-left'>
-                <p className='font-semibold'>{rankings.username}</p>
-                <p className='ml-2 text-xs font-bold'>
-                  {rankings.points} Points
+            <>
+              <div
+                key={index}
+                className='flex items-center gap-4 rounded-xl p-4 '
+              >
+                <p className='bg-primary-tealmd m-2 rounded-full p-1 font-bold'>
+                  {rankings.position}
                 </p>
-              </span>
-              <span className='m-2 w-4'>
-                <p>{rankings.RP}</p>
-              </span>
-            </div>
+
+                <span className='flex items-center gap-4'>
+                  <span className='absolute flex h-12 items-center rounded-xl '>
+                    <Image
+                      src={rankings.avatar}
+                      alt=''
+                      width={50}
+                      className='relative h-full rounded-xl object-cover '
+                    />
+                  </span>
+                  <span className='relative top-5 left-8 z-10'>
+                    {rankings.badge}
+                  </span>
+                </span>
+
+                <span className='relative ml-4 flex flex-col text-left'>
+                  <p className='font-semibold'>{rankings.username}</p>
+                  <p className='ml-2 text-xs font-bold'>
+                    {rankings.points} Points
+                  </p>
+                </span>
+                <span className='m-2 w-4'>
+                  <p>{rankings.RP}</p>
+                </span>
+              </div>
+              <hr className='border-1 w-full rounded-full border-slate-50' />
+            </>
           );
         })}
       </div>

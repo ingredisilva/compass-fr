@@ -1,4 +1,6 @@
+import Image from 'next/image';
 import Link from 'next/link';
+import Logo from 'public/images/compasslogo.png';
 import Education from 'public/svg/education.svg';
 import Goals from 'public/svg/goals.svg';
 import Finance from 'public/svg/graph.svg';
@@ -49,9 +51,11 @@ const dashboard = [
 
 function Dashboard() {
   return (
-    <aside className='m-10 h-3/4 rounded-3xl bg-slate-50 p-2 shadow-2xl'>
-      <nav className='flex h-full flex-col justify-between p-3'>
-        <div className='flex w-full flex-col gap-2 '>
+    <aside className='w-lg rounded-3xl bg-slate-50 p-10 shadow-2xl'>
+      <nav className='flex h-full flex-col items-center justify-center gap-8 p-3'>
+        <Image src={Logo} alt='Compass logo' width={100} />
+        <hr className='w-full rounded-full border-1 border-gray-200' />
+        <div className='flex flex-col gap-2 '>
           {dashboard.map((navItems, index) => {
             return (
               <>
@@ -60,7 +64,10 @@ function Dashboard() {
                   className='flex w-full items-center rounded-2xl p-2 font-primary text-sm text-gray-800 hover:bg-slate-100'
                 >
                   {navItems.icon}
-                  <Link href={navItems.href} className='mx-4 font-semibold '>
+                  <Link
+                    href={navItems.href}
+                    className='mx-4 text-xl font-semibold'
+                  >
                     {navItems.name}
                   </Link>
                 </button>
@@ -68,9 +75,12 @@ function Dashboard() {
             );
           })}
         </div>{' '}
-        <button className='mt-10 flex items-center justify-center gap-1 rounded-xl bg-orange-200 p-1 font-semibold'>
-          <Settings alt='' width={20} height={30} />
-          Settings
+        <button className='mt-40 flex items-center justify-center  gap-2 rounded-xl bg-orange-200 p-1 font-semibold'>
+          <span className='mx-10 flex items-center gap-2'>
+            {' '}
+            <Settings alt='' width={20} height={30} />
+            Settings
+          </span>
         </button>
       </nav>
     </aside>

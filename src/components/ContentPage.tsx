@@ -9,14 +9,14 @@ function ContentPage() {
   return (
     <>
       <Header />
-      <div className='flex h-full'>
+      <div className='mx-10 flex gap-10'>
         <div className='flex h-full'>
           <Dashboard />
         </div>
-        <div className='w-full '>
+        <div className='w-full'>
           <Content />
         </div>{' '}
-        <aside>
+        <aside className='h-full'>
           <RankingCards />
         </aside>
       </div>
