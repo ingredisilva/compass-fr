@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Content from '@/components/Content';
-import Dashboard from '@/components/layout/Dashboard';
+import Dashboard from '@/components/layout/DashboardMenu';
 import Header from '@/components/layout/Header';
 import RankingCards from '@/components/RankingCards';
 
