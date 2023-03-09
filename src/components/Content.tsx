@@ -1,5 +1,6 @@
 import React from 'react';
 
+import DailyPlanner from '@/components/Features/DailyPlanner';
 import ProjectOverviewCard from '@/components/ProjectOverviewCard';
 
 interface DateFormatOptions {
@@ -26,6 +27,7 @@ export default function Content() {
         <div className='flex flex-col gap-4'>
           <h2 className='mb-4 mt-8 text-xs font-bold'>Current Projects</h2>
           <ProjectOverviewCard />
+          <DailyPlanner date={undefined} />
           {/*  <TasksCard /> */}
         </div>
       </div>
